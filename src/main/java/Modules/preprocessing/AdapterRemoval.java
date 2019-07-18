@@ -65,6 +65,7 @@ public class AdapterRemoval extends AModule {
         cmd.add(this.communicator.getCpucores());
         cmd.add("--trimns");
         cmd.add("--trimqualities");
+        cmd.add("--preserve5p");
         cmd.add("--adapter1");
         cmd.add(this.communicator.getMerge_fwadaptor());
         cmd.add("--adapter2");
@@ -76,6 +77,13 @@ public class AdapterRemoval extends AModule {
         cmd.add("--minadapteroverlap");
         cmd.add(String.valueOf(this.communicator.getMerge_min_adapter_overlap()));
         cmd.add("--collapse");
+
+        if (this.communicator.isQualityBase64()) {
+          cmd.add("--qualitybase");
+          cmd.add("64");
+          cmd.add("--qualitybase-output");
+          cmd.add("33");
+        }
 
         return cmd.toArray(new String[0]);
     }
@@ -107,6 +115,7 @@ public class AdapterRemoval extends AModule {
         cmd.add(this.communicator.getCpucores());
         cmd.add("--trimns");
         cmd.add("--trimqualities");
+        cmd.add("--preserve5p");
         cmd.add("--adapter1");
         cmd.add(this.communicator.getMerge_fwadaptor());
         cmd.add("--adapter2");
@@ -118,6 +127,13 @@ public class AdapterRemoval extends AModule {
         cmd.add("--minadapteroverlap");
         cmd.add(String.valueOf(this.communicator.getMerge_min_adapter_overlap()));
         cmd.add("--combined-output");
+
+        if (this.communicator.isQualityBase64()) {
+          cmd.add("--qualitybase");
+          cmd.add("64");
+          cmd.add("--qualitybase-output");
+          cmd.add("33");
+        }
 
         return cmd.toArray(new String[0]);
     }
@@ -141,6 +157,7 @@ public class AdapterRemoval extends AModule {
         cmd.add(this.communicator.getCpucores());
         cmd.add("--trimns");
         cmd.add("--trimqualities");
+        cmd.add("--preserve5p");
         cmd.add("--adapter1");
         cmd.add(this.communicator.getMerge_fwadaptor());
         cmd.add("--adapter2");
@@ -151,6 +168,13 @@ public class AdapterRemoval extends AModule {
         cmd.add(String.valueOf(this.communicator.getQuality_minreadquality()));
         cmd.add("--minadapteroverlap");
         cmd.add(String.valueOf(this.communicator.getMerge_min_adapter_overlap()));
+
+        if (this.communicator.isQualityBase64()) {
+          cmd.add("--qualitybase");
+          cmd.add("64");
+          cmd.add("--qualitybase-output");
+          cmd.add("33");
+        }
 
         return cmd.toArray(new String[0]);
 

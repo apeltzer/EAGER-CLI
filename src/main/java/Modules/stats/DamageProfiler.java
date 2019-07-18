@@ -23,6 +23,7 @@ public class DamageProfiler extends AModule {
                     "TMPDIR",
                     getOutputfolder() + System.getProperty ("file.separator") + ".tmp");
         }
+        AModule.setEnvironmentForParameterDelete (env, "DISPLAY");
     }
 
     @Override

@@ -1,6 +1,6 @@
 group 'com.uni-tuebingen.de.it.eager.eager-cli'
 
-version '1.92.55'
+version '1.92.56'
 
 
 buildscript {
