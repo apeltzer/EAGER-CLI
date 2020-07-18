@@ -1,3 +1,7 @@
+# DEPRECATED
+
+Please instead use https://github.com/nf-core/eager as EAGERv1 won't be developed any further.
+
 # EAGER-CLI
 The EAGER Command Line Component. This is the main execution runner required to run XML files created with the GUI component.
 
